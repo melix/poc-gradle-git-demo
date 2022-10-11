@@ -1,0 +1,23 @@
+plugins {
+    id 'application'
+    id 'poc.git'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+
+    implementation 'com.google.guava:guava:31.0.1-jre'
+}
+
+application {
+    mainClass = 'com.acme.App'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+

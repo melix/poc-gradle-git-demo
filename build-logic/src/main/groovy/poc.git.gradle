@@ -1,0 +1,12 @@
+plugins {
+    id 'java-base'
+}
+
+import poc.git.GenerateGitInfo
+
+def generateGitInfo = tasks.register("generateGitInfo", GenerateGitInfo) {
+    outputDirectory.convention(layout.buildDirectory.dir("generated/git-info"))
+    className.convention("poc.git.GitInfo")
+}
+
+sourceSets.main.java.srcDir(generateGitInfo)

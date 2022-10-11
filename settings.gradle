@@ -1,0 +1,6 @@
+pluginManagement {
+    includeBuild 'build-logic'
+}
+
+rootProject.name = 'gradle-git-info'
+include('app')
